@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Placement Tracker — Sign in</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="auth-shell">
+  <div class="auth-card">
+    <div class="brand"><span class="dot"></span> Smart Placement</div>
+    <div class="subtitle">Your placement prep, tracked like a launch checklist.</div>
+
+    <div class="auth-tabs">
+      <div class="auth-tab active" id="tab-login" onclick="switchTab('login')">Log in</div>
+      <div class="auth-tab" id="tab-register" onclick="switchTab('register')">Register</div>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="login-form">
+      <div class="field">
+        <label>Email</label>
+        <input type="email" id="login-email" required placeholder="you@college.edu">
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="login-password" required placeholder="••••••••">
+      </div>
+      <button class="btn btn-primary btn-block" type="submit">Log in</button>
+      <div class="error-msg" id="login-error"></div>
+    </form>
+
+    <button type="button" class="btn btn-ghost btn-block mt-16" id="demo-btn">Preview with demo data (no login needed)</button>
+
+    <!-- REGISTER FORM -->
+    <form id="register-form" class="hidden">
+      <div class="field">
+        <label>Full name</label>
+        <input type="text" id="reg-name" required placeholder="Alekhya Pinnamaneni">
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input type="email" id="reg-email" required placeholder="you@college.edu">
+      </div>
+      <div class="field">
+        <label>College</label>
+        <input type="text" id="reg-college" required placeholder="Sri Vasavi Engineering College">
+      </div>
+      <div class="grid cols-2">
+        <div class="field">
+          <label>Branch</label>
+          <input type="text" id="reg-branch" required placeholder="CSE - AI">
+        </div>
+        <div class="field">
+          <label>Graduation year</label>
+          <input type="number" id="reg-gradyear" required placeholder="2028">
+        </div>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="reg-password" required placeholder="Minimum 8 characters">
+      </div>
+      <button class="btn btn-primary btn-block" type="submit">Create account</button>
+      <div class="error-msg" id="register-error"></div>
+    </form>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics — Smart Placement Tracker</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+
+  <div class="main">
+    <div class="topbar">
+      <div>
+        <div class="eyebrow">Analytics</div>
+        <h1>Your progress, charted</h1>
+      </div>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card"><h3>Readiness trend</h3><canvas id="chart-readiness" height="220"></canvas></div>
+      <div class="card"><h3>Applications per month</h3><canvas id="chart-apps-month" height="220"></canvas></div>
+    </div>
+
+    <div class="grid cols-2 mt-24">
+      <div class="card"><h3>Selection rate</h3><canvas id="chart-selection" height="220"></canvas></div>
+      <div class="card"><h3>Coding growth</h3><canvas id="chart-coding-growth" height="220"></canvas></div>
+    </div>
+
+    <div class="card mt-24">
+      <h3>Aptitude improvement</h3>
+      <canvas id="chart-aptitude-improve" height="180"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/analytics.js"></script>
+</body>
+</html>

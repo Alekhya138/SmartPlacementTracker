@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile — Smart Placement Tracker</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+
+  <div class="main">
+    <div class="topbar">
+      <div>
+        <div class="eyebrow">Student profile</div>
+        <h1>Your profile</h1>
+      </div>
+      <button class="btn btn-primary" id="save-btn">Save changes</button>
+    </div>
+
+    <form id="profile-form">
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Basic details</h3>
+          <div class="field"><label>Full name</label><input type="text" id="p-name"></div>
+          <div class="field"><label>Email</label><input type="email" id="p-email" disabled></div>
+          <div class="field"><label>Phone</label><input type="tel" id="p-phone" placeholder="+91 9XXXXXXXXX"></div>
+          <div class="grid cols-2">
+            <div class="field"><label>College</label><input type="text" id="p-college"></div>
+            <div class="field"><label>Branch</label><input type="text" id="p-branch"></div>
+          </div>
+          <div class="field"><label>CGPA</label><input type="number" step="0.01" min="0" max="10" id="p-cgpa"></div>
+        </div>
+
+        <div class="card">
+          <h3>Skills & links</h3>
+          <div class="field"><label>Skills (comma separated)</label><textarea id="p-skills" rows="2" placeholder="Python, React, AWS Lambda"></textarea></div>
+          <div class="field"><label>Programming languages (comma separated)</label><input type="text" id="p-languages" placeholder="Java, Python, JavaScript"></div>
+          <div class="field"><label>LinkedIn URL</label><input type="url" id="p-linkedin"></div>
+          <div class="field"><label>GitHub URL</label><input type="url" id="p-github"></div>
+          <div class="grid cols-2">
+            <div class="field"><label>LeetCode profile</label><input type="text" id="p-leetcode"></div>
+            <div class="field"><label>HackerRank profile</label><input type="text" id="p-hackerrank"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid cols-2 mt-24">
+        <div class="card">
+          <h3>Certifications</h3>
+          <div id="cert-list"></div>
+          <div class="field mt-16"><input type="text" id="cert-input" placeholder="e.g. AWS Cloud DevOps — APSSDC"></div>
+          <button type="button" class="btn btn-ghost btn-block" id="add-cert">+ Add certification</button>
+        </div>
+
+        <div class="card">
+          <h3>Projects</h3>
+          <div id="project-list"></div>
+          <div class="field mt-16"><input type="text" id="project-input" placeholder="e.g. Tiffin Mitra — multi-agent AI assistant"></div>
+          <button type="button" class="btn btn-ghost btn-block" id="add-project">+ Add project</button>
+        </div>
+      </div>
+
+      <div class="card mt-24">
+        <h3>Resume</h3>
+        <div class="field"><label>Upload resume (PDF)</label><input type="file" id="resume-file" accept="application/pdf"></div>
+        <div class="stat-sub" id="resume-status">No resume uploaded yet.</div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

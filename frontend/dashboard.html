@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Smart Placement Tracker</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+
+  <div class="main">
+    <div class="topbar">
+      <div>
+        <div class="eyebrow">Mission status</div>
+        <h1 id="welcome-heading">Welcome back</h1>
+      </div>
+    </div>
+
+    <!-- Readiness instrument -->
+    <div class="card mt-16">
+      <h3>Placement Readiness <span class="gauge-status" id="readiness-badge">—</span></h3>
+      <div class="gauge-wrap">
+        <div id="gauge-holder"></div>
+        <div style="flex:1; min-width:220px;">
+          <p class="stat-sub" id="readiness-note">Complete your profile, log coding + aptitude scores, and upload your resume to raise your readiness score.</p>
+          <div class="flex gap-8 mt-16">
+            <a href="profile.html" class="btn btn-ghost">Update profile</a>
+            <a href="coding.html" class="btn btn-ghost">Log progress</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick stat cards -->
+    <div class="grid cols-4 mt-24" id="stat-cards">
+      <!-- injected by JS -->
+    </div>
+
+    <div class="grid cols-2 mt-24">
+      <div class="card">
+        <h3>Application Pipeline</h3>
+        <div id="pipeline-summary"></div>
+      </div>
+      <div class="card">
+        <h3>This Week's Focus</h3>
+        <div id="focus-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/gauge.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

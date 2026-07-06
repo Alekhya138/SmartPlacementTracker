@@ -1,0 +1,3 @@
+# boto3 ships with the AWS Lambda Python runtime by default, so this file
+# is only needed if you add extra dependencies (e.g. PyJWT, requests).
+# Keeping the project dependency-free keeps Lambda cold starts fast.
